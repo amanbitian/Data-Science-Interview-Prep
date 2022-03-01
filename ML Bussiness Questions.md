@@ -4,7 +4,7 @@
 Predominantly, a ML model needs to be updated for two reasons
 
 1. Model Drift 
-2. Business Reasons
+2. Business Reasons (`Companies failing to match the pace of this change in customer behavior were hit the worst`.)
 
 Let's first breakdown scenarios where MMM models need updating.
 
@@ -25,7 +25,7 @@ Economic and Geo political factors do affect the MMM models. The current Ukraine
 Similarly, Covid waves brings with it frequent lockdowns like situations and these too in return affect the economy.
 To reflect the effect of these macroeconomic, geo- political and force majeure factors in the model, the model needs to be updated.
 
-When should you update your MMM model?
+### When should you update your MMM model?
 
 MMM models typically needs updating in the frequency of 
 
@@ -35,8 +35,8 @@ Half Yearly
 
 How frequently the model needs to be updated depends on :
 
-◾️ How quickly things have changed on the ground.
-◾️ How quickly you want to capture the effect and react to these changes.
+◾️ **How quickly things have changed on the ground**.
+◾️ **How quickly you want to capture the effect and react to these changes**.
 
 📌 Monthly - Generally companies in the non CPG / FMCG tend to prefer monthly level updates since the variables change that quickly and its effect on the outcome variable be it sales, CTR, lead conversion etc. could be reflected early. This is not to say CPG/ FMCG brands don't / won't require monthly updating.
 
@@ -45,3 +45,13 @@ How frequently the model needs to be updated depends on :
 Moreover, some of the data capture cycle too happens at a quarterly level. Having said this, if there is a frequent change in the market due to macroeconomic, geo political or pandemic, then perhaps the CPG /FMCG brands too can opt for monthly updates.
 
 📌 Half Yearly - Updates this long drawn out is pretty rare. However there are some CPG brands which may not see frequent changes in the market and hence opt for half yearly updates.
+
+### Model Drift::
+Model drift can be classified into two broad categories. 
+1. **Concept drift**: This happens when the statistical properties of the target variable itself change. As is evident, `if the very meaning of the variable that we are trying to predict, changes, the model wouldn’t really work well for this updated definition`.
+2. **Data drift**: This happens when the statistical properties of the predictors change. Again, if the underlying variables are changing, the model is bound to fail. So obvious! A classic example of when this might happen is when the patterns in the data change due to seasonality. Another example is when personal preferences change.
+
+How to address Data Drifting?
+* Best way to address this issue is to continuously re-fit the models.
+* A more complex methodology to fight model drift is to model the change itself. The first model developed is kept static, and serves as a baseline. 
+* The best way to detect drift, however, is continuous monitoring. Metrics related to the stability of the model need to be monitored at continuous intervals.
